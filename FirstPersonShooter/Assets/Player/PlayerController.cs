@@ -9,8 +9,8 @@ using TMPro;
 public class PlayerController : MonoBehaviour
 {
 
-    // Debug variables
-    public TMP_Text debug_text;
+    /* // Debug variables
+    public TMP_Text debug_text; */
 
     // Camera variables
     public Camera main_camera;
@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     public int invert_factor_x = 1;
     public int invert_factor_y = 1;
 
-    // Movement variables
+    /* // Movement variables
     private CharacterController character_controller;
     private Vector3 player_velocity;
     private Vector3 wish_dir = Vector3.zero;
@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
 
     // Player input
     private Vector2 move_input;
-    private bool grounded;
+    private bool grounded; */
 
     // Start is called before the first frame update
     void Start()
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
         if (invert_y) invert_factor_y = -1;
 
         // Reference to character controller component
-        character_controller = GetComponent<CharacterController>();
+        /* character_controller = GetComponent<CharacterController>(); */
 
     }
 
@@ -62,17 +62,17 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        // Debug
+        /* // Debug
         debug_text.text = "Wish Dir: " + wish_dir.ToString();
         debug_text.text += "\nPlayer Velocity: " + player_velocity.ToString();
         debug_text.text += "\nSpeed: " + new Vector3(player_velocity.x, 0, player_velocity.z).magnitude.ToString();
-        debug_text.text += "\nGrounded: " + grounded.ToString();
+        debug_text.text += "\nGrounded: " + grounded.ToString(); */
 
         Look();
 
     }
 
-    private void FixedUpdate()
+    /* private void FixedUpdate()
     {
 
         // Find wish dir
@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
         
         character_controller.Move(player_velocity * Time.deltaTime);
 
-    }
+    } */
 
     public void GetLookInput(InputAction.CallbackContext context)
     {
@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void GetMoveInput(InputAction.CallbackContext context)
+    /* public void GetMoveInput(InputAction.CallbackContext context)
     {
 
         move_input = context.ReadValue<Vector2>();
@@ -112,7 +112,7 @@ public class PlayerController : MonoBehaviour
 
         Jump();
 
-    }
+    } */
 
     private void Look()
     {
@@ -128,14 +128,14 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void Jump()
+    /* public void Jump()
     {
 
         if(grounded) player_velocity.y = jump_impulse;
 
     }
 
-    private Vector3 Accelerate(Vector3 wish_dir, Vector3 current_velocity, float accel, float max_speed)
+     private Vector3 Accelerate(Vector3 wish_dir, Vector3 current_velocity, float accel, float max_speed)
     {
 
         // Vector3 projection of current velocity (the speed that the player is going)
@@ -194,6 +194,6 @@ public class PlayerController : MonoBehaviour
 
         return Accelerate(wish_dir, new_velocity, acceleration, max_speed);
 
-    }
+    } */
 
 }
