@@ -1653,7 +1653,7 @@ GameObject:
   - component: {fileID: 1350634228}
   - component: {fileID: 1350634227}
   m_Layer: 0
-  m_Name: Fin
+  m_Name: Pointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
